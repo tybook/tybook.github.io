@@ -55,53 +55,47 @@
 									<h2>Predicting Advertisement Click-Through Rates</h2>
 									<p>By using statistical & machine learning techniques to analyze a proprietary dataset.</p>
 								</header>
+								<h4>Background & Motivation</h4>
 								<p>Members of our group have extensive experience with technology startups and are interested in how these businesses successfully market products in today's industry. Our motivation is to identify specific variables that serve as predictors for an online advertisement's click-through rate. A click-through rate (CTR) is a measure of success of advertisement placement based on the ratio of clicks compared to the number of impressions or times the ad is show.
 We have acquired a proprietary dataset from a third-party advertising firm that specializes in cross-platform marketing and content monetization. Using this dataset, we plan to construct several models that identify important predictors of click-through rate. Our data analysis includes performing a logistic regression and generating a naive Bayesian classifier on a training subset of our data. We then verified our results on a test subset.</p>
 <p>Our major inspiration stems from the recent paradigm shift in the advertising industry from PC-targeted banner advertisements to mobile-targeted banner advertisements and native advertising based on social media. Despite a recent shift towards mobile-based browsing, we wanted to explore the continuing relevance of PC-targeted banner advertising, as a significant market share continues to access the Internet using traditional methods.</p>
+								<h4>Related Work</h4>
+								<p>
+Our foray into the advertising industry was inspired by our prior experience with technology startups. Members of our group intend to work for similar companies upon graduation in business development roles, and have performed extensive research outside of class regarding various advertising techniques.
+Our major inspiration stems from the recent paradigm shift in the advertising industry from PC-targeted banner advertisements to mobile-targeted banner advertisements and native advertising based on social media. Despite a recent shift towards mobile-based browsing, we wanted to explore the continuing relevance of PC-targeted banner advertising, as a significant market share continues to access the Internet using traditional methods.</p>
+<p>Previous literature has investigated the differences between business-to-business (B2B) and business-to-consumer (B2C) banner advertisements <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=190440&fileId=S0021849903030459">(Lohtia, Donthu, and Hershberger)</a>, while more recent research has addressed the effect of specific decision rules on click-through rate <a href="http://www.cs.put.poznan.pl/dweiss/research/adrules/papers/troa.pdf">(Dembczyński, Kotłowski, and Weiss)</a>.
+Our investigation hopes to further existing literature and address specific critical knowledge gaps by determining which variables in our dataset contribute to click-through rate.</p>
 						
 					<!-- Two -->
 						<section id="two">
 							<div class="container">
 								<h3>Data Exploration</h3>
-								<p>When we began our investigation, we proposed the following questions. These questions were born out of our initial preliminary analysis of the data and its features. We first looked at the data fields available in our dataset: an advertisement's click status, the hour of its clickthrough (in UTC), its banner position, the site it was placed on, the type of site it was placed on, the app it was viewed in, the type of app it was viewed in, the device it was viewed on, and the type it was viewed on. We also evaluated several other variables in the dataset that were deliberately obfuscated (named C## where # represents a random numeral) to preserve the security of this proprietary data.
+								<h4>Initial Questions</h4>
+								<p>When we began our investigation, we proposed the following questions. These questions were born out of our initial preliminary analysis of the data and its features. We first looked at the data fields available in our dataset: an advertisement's click status, the hour of its clickthrough (in UTC), its banner position, the site it was placed on, the type of site it was placed on, the app it was viewed in, the type of app it was viewed in, the device it was viewed on, and the type it was viewed on. We also evaluated several other variables in the dataset that were deliberately obfuscated (named C## where # represents a random numeral) to preserve the security of this proprietary data.</p>
 									<ul>
 										<li>Our first question: what is the overall click-through rate across all observations?</li>
 										<li>How much does banner position, information about the specific site/app, or another anonymous categorical variable shape the click-through rate? Will we overfit the model given the plethora of categorical information or size of the dataset?</li>
 									</ul>	
-								</p>
+								
 								<p>As we began our analysis, we realized that our data primarily consisted of categorical variables. Thus, we determined that it would be most appropriate to evaluate it using a multinomial logistic regression and naive Bayesian classifier. Although we had initially proposed constructing a multiple Ordinary Least Squares linear regression alongside a k-Nearest-Neighbors classifier (and potentially a random forest classifier), we deemed that the data was inappropriate for such analyses and cut them from our list of exploratory methods.</p>
 								<p>We also considered additional questions in the course of our analysis—the major one being whether the presence of multiple high cardinality categorical features would cause our models to overfit the data. Given the size of our dataset—not a small set by any means but certainly not a large one spanning gigabytes—we wanted to further investigate this issue.</p>					
 							</div>
+							
+							<h4>Methodology</h4>
+							<p>[Describe steps we took in exploring & transforming the data; with plots]</p>
 						</section>
 						
 					<!-- Three -->
 						<section id="three">
 							<div class="container">
 								<h3>Data Analysis</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-								<!--div class="features">
-									<article>
-										<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-										<div class="inner">
-											<h4>Possibly broke spacetime</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-										</div>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-										<div class="inner">
-											<h4>Terraformed a small moon</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-										</div>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-										<div class="inner">
-											<h4>Snapped dark matter in the wild</h4>
-											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-										</div>
-									</article>
-								</div-->
+				
+								<h4>Multinomial Logistic Regression</h4>
+								<p>[Describe how we carried this out; show final plot]</p>
+								
+								<h4>Naive Bayes Analysis</h4>
+								<p>[Describe how we carried this out; show final plot]</p>
+								
 							</div>
 						</section>
 						
@@ -109,27 +103,23 @@ We have acquired a proprietary dataset from a third-party advertising firm that 
 						<section id="four">
 							<div class="container">
 								<h3>Conclusions</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-								<!--form method="post" action="#">
-									<div class="row uniform">
-										<div class="6u 12u(3)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u 12u(3)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-									</div>
-									<div class="row uniform">
-										<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-									</div>
-									<div class="row uniform">
-										<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-									</div>
-									<div class="row uniform">
-										<div class="12u">
-											<ul class="actions">
-												<li><input type="submit" class="special" value="Send Message" /></li>
-												<li><input type="reset" value="Reset Form" /></li>
-											</ul>
-										</div>
-									</div>
-								</form-->
+								<p>To begin our analysis and get a general idea of the data set that we were working with, we created a set of histograms documenting the distribution of the data based on the categories. All of the names of the values within the categories are all abstracted for confidentiality reasons, but the underlying data suggests the relative frequency of each variable within the categories. For example, though we do not know the exact values for each ID, we can see that the “Device Type” category has only 4 unique IDs, and we can assume they represent values such as iOS or Android. With the exploratory analysis of the following categories, note that they do represent real values but are just abstracted for the time being. In terms of frequency of values for each category, here are the main drivers:</p>
+								<ul>
+									<li> For Site Category, most of the points of the data were within IDs 1, 3, 4, and 5 </li>
+									<li> For App Category, most of the points of the data were within IDs 1 and 2 </li>
+									<li> For Banner Position, most of the points of the data were within IDs 1 and 2 </li>
+									<li> For Device type, most of the points of the data were within ID 2 </li>
+									<li> Device Connectivity type, most of the points of the data were within ID 1 </li>
+									<li> For Category 1, most of the points of the data were within ID 1 </li>
+									<li> For Category 15, most of the points of the data were within ID 1 </li>
+									<li> For Category 18, most of the points of the data were within IDs 1, 2, 3, and 4 </li>
+									<li> For Category 19, most of the points of the data were within IDs 1, 3, and 37 </li>
+									<li> For Category 21, most of the points of the data were within IDs 1, 2, 8, and 30 </li>
+								</ul>
+								
+								<p>Now let us continue addressing other questions that we initially raised. It looks like our initial concern about high cardinality categorical variables was not unfounded. <br><br>
+We very quickly ran an informal test of our model on a data set in which each categorical variable's low-frequency levels were consolidated, and found the predictive power of that model to be much higher. As a result, we conclude that the extraordinarily large number of unique values within each categorical variable may have influenced our model's training, and recommend removing them in future iterations of this model. Since these features are not as generalizable, especially because many data points seem to be clustered in several high-impact levels within each category, we hope to further our model by constructing an additional dataset in which those features are removed. However, our next concern becomes the total size of the dataset, as we do not want to overfit our model if our dataset still has a large number of categorical variables but not enough data points. In conclusion, we have determined that click-through rate can be influenced by a variety of factors, and ultimately conclude that more in-depth research can yield additional insight and heretofore unknown information about specific click-through rate conversion and yield.</p>
+								
 							</div>
 						</section>
 						
@@ -137,357 +127,14 @@ We have acquired a proprietary dataset from a third-party advertising firm that 
 						<section id="five">
 							<div class="container">
 								<h3>Screencast</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+								<embed class="video" width=100%  src="http://www.youtube.com/v/Y0VWf4aFdL4">
+								<script>
+									var width = $('.video').width();
+									$('.video').css('height',(width * (9/16)));
+								</script>
 							</div>
 						</section>
-				
-					<!-- Five -->
-					<!--
-						<section id="five">
-							<div class="container">
-								<h3>Elements</h3>
 
-								<section>
-									<h4>Text</h4>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<header>
-										<h4>Heading with a Subtitle</h4>
-										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-									</header>
-									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-									<header>
-										<h5>Heading with a Subtitle</h5>
-										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-									</header>
-									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h5>Blockquote</h5>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h5>Preformatted</h5>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h4>Lists</h4>
-									<div class="row">
-										<div class="6u 12u(3)">
-											<h5>Unordered</h5>
-											<ul>
-												<li>Dolor pulvinar etiam magna etiam.</li>
-												<li>Sagittis adipiscing lorem eleifend.</li>
-												<li>Felis enim feugiat dolore viverra.</li>
-											</ul>
-											<h5>Alternate</h5>
-											<ul class="alt">
-												<li>Dolor pulvinar etiam magna etiam.</li>
-												<li>Sagittis adipiscing lorem eleifend.</li>
-												<li>Felis enim feugiat dolore viverra.</li>
-											</ul>
-										</div>
-										<div class="6u 12u(3)">
-											<h5>Ordered</h5>
-											<ol>
-												<li>Dolor pulvinar etiam magna etiam.</li>
-												<li>Etiam vel felis at lorem sed viverra.</li>
-												<li>Felis enim feugiat dolore viverra.</li>
-												<li>Dolor pulvinar etiam magna etiam.</li>
-												<li>Etiam vel felis at lorem sed viverra.</li>
-												<li>Felis enim feugiat dolore viverra.</li>
-											</ol>
-											<h5>Icons</h5>
-											<ul class="icons">
-												<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-												<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-												<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-											</ul>
-										</div>
-									</div>
-									<h5>Actions</h5>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button alt">Default</a></li>
-									</ul>
-									<ul class="actions small">
-										<li><a href="#" class="button special small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-										<li><a href="#" class="button alt small">Small</a></li>
-									</ul>
-									<div class="row">
-										<div class="3u 6u(2) 12u$(3)">
-											<ul class="actions vertical">
-												<li><a href="#" class="button special">Default</a></li>
-												<li><a href="#" class="button">Default</a></li>
-												<li><a href="#" class="button alt">Default</a></li>
-											</ul>
-										</div>
-										<div class="3u 6u$(2) 12u$(3)">
-											<ul class="actions vertical small">
-												<li><a href="#" class="button special small">Small</a></li>
-												<li><a href="#" class="button small">Small</a></li>
-												<li><a href="#" class="button alt small">Small</a></li>
-											</ul>
-										</div>
-										<div class="3u 6u(2) 12u$(3)">
-											<ul class="actions vertical">
-												<li><a href="#" class="button special fit">Default</a></li>
-												<li><a href="#" class="button fit">Default</a></li>
-												<li><a href="#" class="button alt fit">Default</a></li>
-											</ul>
-										</div>
-										<div class="3u 6u$(2) 12u$(3)">
-											<ul class="actions vertical small">
-												<li><a href="#" class="button special small fit">Small</a></li>
-												<li><a href="#" class="button small fit">Small</a></li>
-												<li><a href="#" class="button alt small fit">Small</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-
-								<section>
-									<h4>Table</h4>
-									<h5>Default</h5>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-									
-									<h5>Alternate</h5>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h4>Buttons</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button alt">Alternate</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special big">Big</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button alt small">Small</a></li>
-									</ul>
-									<ul class="actions fit">
-										<li><a href="#" class="button special fit">Fit</a></li>
-										<li><a href="#" class="button fit">Fit</a></li>
-										<li><a href="#" class="button alt fit">Fit</a></li>
-									</ul>
-									<ul class="actions fit small">
-										<li><a href="#" class="button special fit small">Fit + Small</a></li>
-										<li><a href="#" class="button fit small">Fit + Small</a></li>
-										<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-										<li><a href="#" class="button alt icon fa-check">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Special</span></li>
-										<li><span class="button disabled">Default</span></li>
-										<li><span class="button alt disabled">Alternate</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h4>Form</h4>
-									<form method="post" action="#">
-										<div class="row uniform">
-											<div class="6u 12u(3)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-											</div>
-											<div class="6u 12u(3)">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<div class="select-wrapper">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="row uniform">
-											<div class="4u 12u(2)">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low Priority</label>
-											</div>
-											<div class="4u 12u(2)">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">Normal Priority</label>
-											</div>
-											<div class="4u 12u(2)">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High Priority</label>
-											</div>
-										</div>
-										<div class="row uniform">
-											<div class="6u 12u(2)">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy of this message</label>
-											</div>
-											<div class="6u 12u(2)">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">I am a human and not a robot</label>
-											</div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" /></li>
-													<li><input type="reset" value="Reset" class="alt" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-
-								<section>
-									<h4>Image</h4>
-									<h5>Fit</h5>
-									<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-									<div class="box alt">
-										<div class="row 50% uniform">
-											<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-										</div>
-										<div class="row 50% uniform">
-											<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										</div>
-										<div class="row 50% uniform">
-											<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-										</div>
-									</div>
-									<h5>Left &amp; Right</h5>
-									<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-								</section>
-
-							</div>
-						</section>
-					-->
-				
 				</div>
 
 			<!-- Footer -->
