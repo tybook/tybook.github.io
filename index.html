@@ -55,23 +55,22 @@
 									<h2>Predicting Advertisement Click-Through Rates</h2>
 									<p>By using statistical & machine learning techniques to analyze a proprietary dataset.</p>
 								</header>
-								<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
-							</div>
-						</section>
+								<p>Members of our group have extensive experience with technology startups and are interested in how these businesses successfully market products in today's industry. Our motivation is to identify specific variables that serve as predictors for an online advertisement's click-through rate. A click-through rate (CTR) is a measure of success of advertisement placement based on the ratio of clicks compared to the number of impressions or times the ad is show.
+We have acquired a proprietary dataset from a third-party advertising firm that specializes in cross-platform marketing and content monetization. Using this dataset, we plan to construct several models that identify important predictors of click-through rate. Our data analysis includes performing a logistic regression and generating a naive Bayesian classifier on a training subset of our data. We then verified our results on a test subset.</p>
+<p>Our major inspiration stems from the recent paradigm shift in the advertising industry from PC-targeted banner advertisements to mobile-targeted banner advertisements and native advertising based on social media. Despite a recent shift towards mobile-based browsing, we wanted to explore the continuing relevance of PC-targeted banner advertising, as a significant market share continues to access the Internet using traditional methods.</p>
 						
 					<!-- Two -->
 						<section id="two">
 							<div class="container">
 								<h3>Data Exploration</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
-								<!--ul class="feature-icons">
-									<li class="fa-code">Write all the code</li>
-									<li class="fa-cubes">Stack small boxes</li>
-									<li class="fa-book">Read books and stuff</li>
-									<li class="fa-coffee">Drink much coffee</li>
-									<li class="fa-bolt">Lightning bolt</li>
-									<li class="fa-users">Shadow clone technique</li>
-								</ul-->
+								<p>When we began our investigation, we proposed the following questions. These questions were born out of our initial preliminary analysis of the data and its features. We first looked at the data fields available in our dataset: an advertisement's click status, the hour of its clickthrough (in UTC), its banner position, the site it was placed on, the type of site it was placed on, the app it was viewed in, the type of app it was viewed in, the device it was viewed on, and the type it was viewed on. We also evaluated several other variables in the dataset that were deliberately obfuscated (named C## where # represents a random numeral) to preserve the security of this proprietary data.
+									<ul>
+										<li>Our first question: what is the overall click-through rate across all observations?</li>
+										<li>How much does banner position, information about the specific site/app, or another anonymous categorical variable shape the click-through rate? Will we overfit the model given the plethora of categorical information or size of the dataset?</li>
+									</ul>	
+								</p>
+								<p>As we began our analysis, we realized that our data primarily consisted of categorical variables. Thus, we determined that it would be most appropriate to evaluate it using a multinomial logistic regression and naive Bayesian classifier. Although we had initially proposed constructing a multiple Ordinary Least Squares linear regression alongside a k-Nearest-Neighbors classifier (and potentially a random forest classifier), we deemed that the data was inappropriate for such analyses and cut them from our list of exploratory methods.</p>
+								<p>We also considered additional questions in the course of our analysis—the major one being whether the presence of multiple high cardinality categorical features would cause our models to overfit the data. Given the size of our dataset—not a small set by any means but certainly not a large one spanning gigabytes—we wanted to further investigate this issue.</p>					
 							</div>
 						</section>
 						
