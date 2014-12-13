@@ -83,7 +83,20 @@ Our investigation hopes to further existing literature and address specific crit
 								<p>We also considered additional questions in the course of our analysis—the major one being whether the presence of multiple high cardinality categorical features would cause our models to overfit the data. Given the size of our dataset—not a small set by any means but certainly not a large one spanning gigabytes—we wanted to further investigate this issue.</p>	
 								
 								<h4>Methodology</h4>
-								<p>[Describe steps we took in exploring & transforming the data; with plots]</p>		
+								<p> After the initial cleanup of the data was complete, we analysed the categorical data to find out how the categories are distributed. We obtained the following graphs for each of the different variables.</p>
+
+								<img src="images/1.png"></img>
+								<img src="images/2.png"></img>	
+								<img src="images/3.png"></img>	
+								<img src="images/4.png"></img>	
+								<img src="images/5.png"></img>	
+								<img src="images/6.png"></img>		
+								<img src="images/7.png"></img>
+								<img src="images/8.png"></img>	
+								<img src="images/9.png"></img>	
+								<img src="images/10.png"></img>	
+								<img src="images/11.png"></img>	
+
 										
 							</div>
 						</section>
@@ -94,10 +107,23 @@ Our investigation hopes to further existing literature and address specific crit
 								<h3>Data Analysis</h3>
 				
 								<h4>Multinomial Logistic Regression</h4>
-								<p>[Describe how we carried this out; show final plot]</p>
+								<p>Logistical regression was carried out on the data to see how accurate a logistical regression model would be. 
+
+								</p>
+
+								<p>We would like to note that scikit-learn's LogisticRegression doesn't actually compute a multinomial logistic regression. Instead, it performs an operation where it fits binary LR models on n classes and normalizes the probabilities. We will discuss this graph and our results in the below conclusion.
+We will initially comment that this graph and the results of the logistic regression demonstrate a relatively high prediction rate. There is a possibility that we overfit the data given the high cardinality of individual categorical variables, and the disparity in distribution between various levels in each categorical variable.</p>
+								<img src="images/regression.png"></img>	
+
+
 								
 								<h4>Naive Bayes Analysis</h4>
-								<p>[Describe how we carried this out; show final plot]</p>
+								<p>Naive Bayesian Analysis is a machine learning technique that is one of the simplest and most efficient ways to classify categorical data. </p>
+
+								<p>sklearn has built in functionality which we used to do our Naive Bayesian Analysis. The technique involves iterating through a training set to calculate the conditional probabilities of the target variable (in this case click) being a 0 or 1 given certain pieces of evidence. </p>
+
+<p>For the test set, the algorithm involves going through all records and passing in the evidence, which in this case will be the data points of all columns except click. Based on the learning done during the training stage the model predicts whether each ad in the test data will be clicked or not based on the evidence that's passed in.</p>
+								<img src="images/bayes.png">
 								
 							</div>
 						</section>
