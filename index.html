@@ -115,7 +115,7 @@ Our investigation hopes to further existing literature and address specific crit
 We will initially comment that this graph and the results of the logistic regression demonstrate a relatively high prediction rate. There is a possibility that we overfit the data given the high cardinality of individual categorical variables, and the disparity in distribution between various levels in each categorical variable.</p>
 								<img src="images/regression.png"></img>	
 
-
+								<p>We look at the probability of the Logistic Regression, and note that the coefficients of the regression represent the rate of change in the "log odds" as each individual explanatory variable changes. This is extremely difficult to convert into a real-world meaningful result, especially since the magnitude of each individual coefficient is extremely low. Nonetheless, we identify that the coefficient for "C1" stood out as an interesting explanatory variable with a coefficient that was 8 orders of magnitude apart from other variables.</p>
 								
 								<h4>Naive Bayes Analysis</h4>
 								<p>Naive Bayesian Analysis is a machine learning technique that is one of the simplest and most efficient ways to classify categorical data. </p>
@@ -124,6 +124,8 @@ We will initially comment that this graph and the results of the logistic regres
 
 <p>For the test set, the algorithm involves going through all records and passing in the evidence, which in this case will be the data points of all columns except click. Based on the learning done during the training stage the model predicts whether each ad in the test data will be clicked or not based on the evidence that's passed in.</p>
 								<img src="images/bayes.png">
+
+								<p>We look at the probability of the Naive Bayesian approach, and we note that the coefficients of the regression represent the empirical log possibility of features given a class, or the probability of some feature given the predictive value of an individual explanatory variable. As noted above, the individual magnitudes of these coefficients were extreely difficult to convert into a real-world meaningful number, especially since the magnitude of each individual coefficient was extremely low. However, we note again that the coefficient for "C1" stands out as an interesting explanatory variable on a completely different order of magnitude from other explanatory variables.</p>
 								
 							</div>
 						</section>
@@ -147,7 +149,11 @@ We will initially comment that this graph and the results of the logistic regres
 								</ul>
 								
 								<p>Now let us continue addressing other questions that we initially raised. It looks like our initial concern about high cardinality categorical variables was not unfounded. <br><br>
-We very quickly ran an informal test of our model on a data set in which each categorical variable's low-frequency levels were consolidated, and found the predictive power of that model to be much higher. As a result, we conclude that the extraordinarily large number of unique values within each categorical variable may have influenced our model's training, and recommend removing them in future iterations of this model. Since these features are not as generalizable, especially because many data points seem to be clustered in several high-impact levels within each category, we hope to further our model by constructing an additional dataset in which those features are removed. However, our next concern becomes the total size of the dataset, as we do not want to overfit our model if our dataset still has a large number of categorical variables but not enough data points. In conclusion, we have determined that click-through rate can be influenced by a variety of factors, and ultimately conclude that more in-depth research can yield additional insight and heretofore unknown information about specific click-through rate conversion and yield.</p>
+We very quickly ran an informal test of our model on a data set in which each categorical variable's low-frequency levels were consolidated, and found the predictive power of that model to be much higher. As a result, we conclude that the extraordinarily large number of unique values within each categorical variable may have influenced our model's training, and recommend removing them in future iterations of this model. Since these features are not as generalizable, especially because many data points seem to be clustered in several high-impact levels within each category, we hope to further our model by constructing an additional dataset in which those features are removed. 
+
+<p>Nonetheless, we conclude that the greatest predictor of click-through rate is "C1", the anonymized categorical variable. From our analysis of both Logistic Regression and the the Naive Bayesian classifier, we conclude that the coefficient of regression for "C1" was most significant within our confidence interval. It had the greatest impact, magnitude-wise, on our model, and leads us to believe that further investigation of this variable is necessary.</p>
+
+<p>However, our next concern is also the total size of the dataset, as we do not want to overfit our model if our dataset still has a large number of categorical variables but not enough data points. In conclusion, we have determined that click-through rate can be influenced by a variety of factors, and ultimately conclude that more in-depth research can yield additional insight and heretofore unknown information about specific click-through rate conversion and yield.</p>
 								
 							</div>
 						</section>
